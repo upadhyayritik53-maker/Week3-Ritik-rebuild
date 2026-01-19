@@ -35,7 +35,7 @@ nav a::after {
   position: absolute;
   width: 0;
   height: 2px;
-  background: red;
+  background: green;
   bottom: -4px;
   left: 0;
   transition: 0.3s;
@@ -122,7 +122,7 @@ nav a:hover::after {
 /* ===== FOOTER ===== */
 footer {
   background: black;
-  color: green;
+  color: white;
   text-align: center;
   padding: 18px;
   font-size: 14px;
