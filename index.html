@@ -1,104 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Week 3 Task - Upadhyay Ritik</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Static Website</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#0f1f1a;
+      color:white;
+    }
+
+    /* ===== NAVBAR ===== */
+    header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:#0b2a1f;
+      padding:15px 25px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-size:22px;
+      font-weight:600;
+      color:#7CFFB2;
+    }
+
+    nav a{
+      margin-left:20px;
+      text-decoration:none;
+      color:white;
+      font-size:15px;
+      position:relative;
+    }
+
+    nav a::after{
+      content:"";
+      position:absolute;
+      width:0;
+      height:2px;
+      background:#7CFFB2;
+      left:0;
+      bottom:-5px;
+      transition:0.3s;
+    }
+
+    nav a:hover::after{
+      width:100%;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero{
+      min-height:75vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:40px 20px;
+      background:linear-gradient(180deg,#1fa463,#0f1f1a);
+    }
+
+    .hero h1{
+      font-size:42px;
+      font-weight:600;
+    }
+
+    .hero p{
+      margin-top:15px;
+      font-size:16px;
+      opacity:0.9;
+    }
+
+    /* ===== CONTENT CARDS ===== */
+    .cards{
+      display:flex;
+      gap:25px;
+      justify-content:center;
+      padding:60px 20px;
+      flex-wrap:wrap;
+    }
+
+    .card{
+      background:#163d2e;
+      width:260px;
+      height:180px;
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      font-size:18px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.4);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      background:#1e5642;
+    }
+
+    /* ===== FOOTER ===== */
+    footer{
+      text-align:center;
+      padding:15px;
+      font-size:14px;
+      background:#0b2a1f;
+      opacity:0.8;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:768px){
+      .hero h1{
+        font-size:32px;
+      }
+
+      nav{
+        display:none;
+      }
+    }
+
+  </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="header">
-    <h1>Upadhyay Ritik</h1>
-    <p>STATIC – Frontend Internship</p>
-    <h2>Week 3 Task — Full Page Website Rebuild (Guided)</h2>
+  <!-- NAVBAR -->
+  <header>
+    <div class="logo">STATIC</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
   </header>
 
-  <!-- Duration -->
-  <section class="section">
-    <h3>Duration</h3>
-    <p>5 Working Days (Day 11–15)</p>
-    <p>Daily Release: 4:00 PM</p>
-    <p>Daily Deadline: 10:00 PM</p>
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>Hero Section Title</h1>
+      <p>This is a placeholder for hero section content.</p>
+    </div>
   </section>
 
-  <!-- Objective -->
-  <section class="section">
-    <h3>Objective</h3>
-    <p>
-      Rebuild a static website page layout using screenshots as reference only.
-      Focus on layout, structure, responsiveness using HTML, CSS and JavaScript.
-    </p>
+  <!-- CONTENT -->
+  <section class="cards">
+    <div class="card">Content Section 1</div>
+    <div class="card">Content Section 2</div>
+    <div class="card">Content Section 3</div>
   </section>
 
-  <!-- Reference Website -->
-  <section class="section">
-    <h3>Reference Website</h3>
-    <ul>
-      <li>Screenshots of a static website page will be provided.</li>
-      <li>Screenshots are for layout and structure reference only.</li>
-    </ul>
-  </section>
-
-  <!-- Important Instructions -->
-  <section class="section">
-    <h3>Important Instructions</h3>
-    <ul>
-      <li>Do not copy text, images, logos or branding.</li>
-      <li>Use placeholder text and simple colors.</li>
-      <li>Focus on layout, structure and responsiveness.</li>
-    </ul>
-  </section>
-
-  <!-- Weekly Expectations -->
-  <section class="section">
-    <h3>Weekly Expectations</h3>
-    <ul>
-      <li>Use the same GitHub repository.</li>
-      <li>Build one complete webpage.</li>
-      <li>Deploy updates daily on same live URL.</li>
-      <li>No layout breaking issues.</li>
-    </ul>
-  </section>
-
-  <!-- Daily Breakdown -->
-  <section class="section">
-    <h3>Daily Breakdown</h3>
-    <ol>
-      <li>Day 11: Page structure and HTML layout</li>
-      <li>Day 12: Header and hero section</li>
-      <li>Day 13: Main content sections</li>
-      <li>Day 14: Footer and responsiveness</li>
-      <li>Day 15: Bug fixes and cleanup</li>
-    </ol>
-  </section>
-
-  <!-- Daily Submission -->
-  <section class="section">
-    <h3>Daily Submission</h3>
-    <ul>
-      <li>GitHub Repository Link</li>
-      <li>Live Website Link (same URL, updated daily)</li>
-    </ul>
-    <button onclick="showMessage()">Click Me</button>
-  </section>
-
-  <!-- Rules -->
-  <section class="section">
-    <h3>Rules</h3>
-    <ul>
-      <li>Screenshots are reference only.</li>
-      <li>Daily deployment is mandatory.</li>
-      <li>No live update = marked incomplete.</li>
-      <li>Structure & execution matter more than visuals.</li>
-    </ul>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>Static Internship Program – Execution over explanation</p>
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Static Website | Week 3 Task
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
