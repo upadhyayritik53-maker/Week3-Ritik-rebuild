@@ -1,4 +1,19 @@
-// Button click interaction
-document.querySelector("button").addEventListener("click", () => {
-  alert("Welcome to Static Internship – Week 3!");
-});
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("open");
+}
+
+/* ===== SCROLL REVEAL ===== */
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+  reveals.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+    if (elementTop < windowHeight - 100) {
+      el.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
