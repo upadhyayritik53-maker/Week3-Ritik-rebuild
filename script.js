@@ -1,6 +1,13 @@
-// Simple animation on scroll
+// Scroll Reveal Animation
+const reveals = document.querySelectorAll(".reveal");
+
 window.addEventListener("scroll", () => {
-  document.querySelectorAll(".card").forEach(card => {
-    card.style.transform = "scale(1.05)";
+  reveals.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+
+    if (sectionTop < screenHeight - 100) {
+      section.classList.add("active");
+    }
   });
 });
